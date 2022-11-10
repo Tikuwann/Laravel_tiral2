@@ -1,0 +1,7 @@
+
+AuthType Basic
+AuthName "Please enter your ID and Password"
+AuthUserFile /Users/naruki/Desktop/todoapp/public/mainte/.htpasswd
+require valid-user
+
+
