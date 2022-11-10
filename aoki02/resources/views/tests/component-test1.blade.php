@@ -3,6 +3,6 @@
 コンポーネントテスト１
 
 
-<x-tests.card title="タイトルー" comment="ほんぶんー"/>
+<x-tests.card title="タイトルー" comment="ほんぶんー" :message="$message"/>
 
 </x-tests.app>
