@@ -1,12 +1,14 @@
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
-            <a href="/">
+            <a href="/owner">
+                <div class="p-8 w-1/2 place-self-center">
+
                 <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
             </a>
         </x-slot>
 
-        <form method="POST" action="{{ route('register') }}">
+        <form method="POST" action="{{ route('owner.register') }}">
             @csrf
 
             <!-- Name -->
@@ -51,7 +53,7 @@
             </div>
 
             <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
+                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('owner.login') }}">
                     {{ __('Already registered?') }}
                 </a>
 

@@ -25,7 +25,7 @@ use App\Http\Controllers\Owner\Auth\VerifyEmailController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('owner.welcome');
 });
 
 Route::get('/dashboard', function () {
