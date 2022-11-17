@@ -30,6 +30,9 @@
         <section class="text-gray-400  body-font">
                   <div class="container px-5 py-4 mx-auto">
 
+                    <x-flash-message status="info" />
+
+
                     <div class="lg:w-2/3 w-full mx-auto overflow-auto">
                       <table class="table-auto w-full text-left whitespace-no-wrap">
                         <thead>

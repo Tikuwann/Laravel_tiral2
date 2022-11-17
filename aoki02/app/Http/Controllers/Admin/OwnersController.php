@@ -88,7 +88,7 @@ class OwnersController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
-        return redirect() -> route('admin.owners.index');
+        return redirect() -> route('admin.owners.index')->with('message','Owner Date Added!');
 
 
     }
