@@ -26,18 +26,63 @@ class OwnerSeeder extends Seeder
             'created_at' => '2021/01/01 11:11::11',
             ],
             [
-            'name' => 'test',
-            'email' => 'tes@tes',
+            'name' => 'test1',
+            'email' => 'tes1@tes',
             'password' => Hash::make('password123'),
             'created_at' => '2021/01/01 11:11::11',
             ],
 
             [
-            'name' => 'test',
-            'email' => 'test@test.com',
+            'name' => 'test2',
+            'email' => 'test2@test.com',
             'password' => Hash::make('password123'),
             'created_at' => '2021/01/01 11:11::11',
-            ]
+            ],
+
+            [
+            'name' => 'test3',
+            'email' => 'test3@test.com',
+            'password' => Hash::make('password123'),
+            'created_at' => '2021/01/01 11:11::11',
+            ],
+
+            [
+            'name' => 'test4',
+            'email' => 'test4@test.com',
+            'password' => Hash::make('password123'),
+            'created_at' => '2021/01/01 11:11::11',
+            ],
+
+            [
+            'name' => 'test5',
+            'email' => 'test5@test.com',
+            'password' => Hash::make('password123'),
+            'created_at' => '2021/01/01 11:11::11',
+            ],
+
+            [
+                'name' => 'test6',
+                'email' => 'test6@test.com',
+                'password' => Hash::make('password123'),
+                'created_at' => '2021/01/01 11:11::11',
+            ],
+
+            [
+                'name' => 'test7',
+                'email' => 'test7@test.com',
+                'password' => Hash::make('password123'),
+                'created_at' => '2021/01/01 11:11::11',
+            ],
+
+            [
+                'name' => 'test8',
+                'email' => 'test8@test.com',
+                'password' => Hash::make('password123'),
+                'created_at' => '2021/01/01 11:11::11',
+            ],
+
+
+
         ]);
 
 

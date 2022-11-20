@@ -8,7 +8,7 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
+                <div class="md:p-6 bg-white border-b border-gray-200">
 {{--}}
                 エロクアント
                 @foreach($e_all as $e_owner)
@@ -28,7 +28,7 @@
 --}}
 
         <section class="text-gray-400  body-font">
-                  <div class="container px-5 py-4 mx-auto">
+                  <div class="container md:md:px-5 py-4 mx-auto">
 
                     <x-flash-message status="session('status')" />
 
@@ -37,11 +37,11 @@
                       <table class="table-auto w-full text-left whitespace-no-wrap">
                         <thead>
                           <tr>
-                            <th class="px-4 py-3 title-font tracking-wider font-medium text-lg text-white bg-gray-400 rounded-tl rounded-bl">Name</th>
-                            <th class="px-4 py-3 title-font tracking-wider font-medium text-white text-lg bg-gray-400">Mail</th>
-                            <th class="px-4 py-3 title-font tracking-wider font-medium text-white text-lg bg-gray-400">Created at</th>
-                            <th class="px-4 py-3 title-font tracking-wider font-medium text-white text-lg bg-gray-400">  Edit  </th>
-                            <th class="px-4 py-3 title-font tracking-wider font-medium text-white text-lg bg-gray-400">  delete  </th>
+                            <th class="md:px-4 py-3 title-font tracking-wider font-medium text-lg text-white bg-gray-400 rounded-tl rounded-bl">Name</th>
+                            <th class="md:px-4 py-3 title-font tracking-wider font-medium text-white text-lg bg-gray-400">Mail</th>
+                            <th class="md:px-4 py-3 title-font tracking-wider font-medium text-white text-lg bg-gray-400">Created at</th>
+                            <th class="md:px-4 py-3 title-font tracking-wider font-medium text-white text-lg bg-gray-400">  Edit  </th>
+                            <th class="md:px-4 py-3 title-font tracking-wider font-medium text-white text-lg bg-gray-400">  delete  </th>
 
 
 
@@ -58,9 +58,9 @@
 
 
                           <tr>
-                            <td class="px-4 py-3">{{$owner -> name}}</td>
-                            <td class="px-4 py-3">{{$owner -> email}}</td>
-                            <td class="px-4 py-3">{{$owner -> created_at -> diffForHumans()}}</td>
+                            <td class="md:px-4 py-3">{{$owner -> name}}</td>
+                            <td class="md:px-4 py-3">{{$owner -> email}}</td>
+                            <td class="md:px-4 py-3">{{$owner -> created_at -> diffForHumans()}}</td>
                             <td class="w-10 text-center">
                                 <button type="button" onclick="location.href='{{route('admin.owners.edit',['owner' => $owner->id])}}'"
                                     class="ont-bold tracking-wide uppercase text-black text-sm brightness-105 hover:bg-blue-300 mx-auto">UPdate</button>
@@ -82,6 +82,7 @@
 
                         </tbody>
                       </table>
+
                     </div>
 
                     <div class=" flex justify-center flex-row items-center">
@@ -95,6 +96,11 @@
 
 
                     </div>
+
+                        <div>
+                            {{ $owners->links()}}
+
+                        </div>
 
 
 

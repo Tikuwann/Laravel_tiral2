@@ -85,6 +85,14 @@
                                         this.closest('form').submit();">
                         {{ __('Log Out') }}
                     </x-responsive-nav-link>
+
+
+
+
+
+
+
+
                 </form>
             </div>
         </div>
