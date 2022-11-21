@@ -12,7 +12,7 @@
 
 
                     <div class="flex justify-center ">
-                        <div class="w-4/5 my-5 mx-auto flex flex-col items-center md:flex-row ">
+                        <div class="w-4/5 my-5 mx-auto flex-col items-center md:flex-row ">
                             <div class="border w-[70%] h-full border-4 bg-white text-black p-10 mx-auto"> <span>
                                     <h1 class="text-3xl font-semibold text-center mb-4 text-black">Owner Data Edit</h1>
                                     <p class="text-xs font-normal mt-2 text-center">Edit Information of Owner  </p>
@@ -30,12 +30,29 @@
                                         <x-input-error :messages="$errors->get('name')" class="mt-2" />
                                  </div>
 
+                                 <div class="relative flex flex-row ">
+                                    <label for="shopname" class="leading-7 text-sm text-gray-600 basis-1/4">Shop Name</label>
+                                    <input type="text" name="shopname" placeholder="Shop Name" id="shopname" value="{{ $owner->shop->name }}" disabled
+                                        class="border-b-2 w-[80%] mb-4 p-3 border-b-gray-400 placeholder:text-gray-500 placeholder:opacity-80 text-sm bg-white focus:outline-none rounded-lg basis-6/8">
+
+                                 </div>
+
+
+
+                                 {{-- <div class="relative place-items-center">
+                                    <label for="shopname" class="leading-7 text-sm text-gray-600 ">Shop Name</label>
+                                    <div class="border-b-2 w-[100%] mb-4 p-3 border-b-gray-400 placeholder:text-gray-500 placeholder:opacity-80 text-sm bg-white focus:outline-none rounded-lg basis-6/8 ">{{ $owner->shop->name }}
+
+                                 </div> --}}
+
                                  <div class="relative flex flex-row">
                                     <label for="email" class="leading-7 text-sm text-gray-600 basis-1/4">E-Mail Address</label>
                                     <input type="email" name="email" placeholder="Email Address" id="email" value="{{ $owner->email }}" required
                                         class="border-b-2 w-[80%] mb-4 p-3 border-b-gray-400 placeholder:text-gray-500 placeholder:opacity-80 text-sm bg-white focus:outline-none rounded-lg basis-6/8">
                                         <x-input-error :messages="$errors->get('email')" class="mt-2" />
                                  </div>
+
+
 
                                  <div class="relative flex">
                                     <label for="password" class="leading-7 text-sm text-gray-600 basis-1/4">Password</label>
@@ -56,6 +73,7 @@
 
                                     {{-- <textarea id="message" name="message" placeholder="Write us a message"
                                         class="w-[80%] bg-white border-2 border-gray-400 h-44 text-sm outline-none placeholder:text-gray-500 placeholder:opacity-80 py-1 px-2 mt-6 resize-none leading-6 duration-200 ease-in-out rounded-lg"></textarea> --}}
+
 
 
                                 </div>
@@ -85,97 +103,5 @@
     </div>
 </x-app-layout>
 
-{{--
 
 
-
-<div class="flex justify-center">
-    <div class="flex flex-col justify-center">
-        <div class="flex flex-col md:flex-row max-w-7xl justify-center items-center ">
-            <div class="overflow-hidden w-full m-4 flex justify-center bg-gray-50 rounded-lg shadow-xl">
-                <div class="flex flex-col md:flex-row items-center shadow-md h-full  ">
-                    <div class="  md:w-1/2 overflow-hidden ">
-                        <div class="flex flex-col items-center justify-center text-stone-400">
-                            <ion-icon name="logo-amplify" class="text-5xl text-fuchsia-600"></ion-icon>
-                            <div class="flex flex-col">
-                                <div class="m-2">EMAIL</div>
-                                <input class="border-b m-2  bg-gray-50 focus:outline-none" />
-
-                                <div class="m-2">PASSWORD</div>
-                                <input class="border-b m-2  bg-gray-50  focus:outline-none" type="password" />
-                                <div class="flex m-2">
-                                    <input class="border-b  border-stone-400 " type="checkbox" />
-                                    <div class="ml-1">Remember Me</div>
-                                </div>
-                                <div class="flex m-2">
-                                    <button
-                                        class="bg-gradient-to-l from-fuchsia-600 to-cyan-400 px-6 py-1 rounded-2xl text-white font-medium">LOGIN</button>
-                                    <button
-                                        class="text-transparent  bg-clip-text bg-gradient-to-l from-fuchsia-600 to-cyan-400 font-bold ml-2 border-2 rounded-2xl px-6 border-cyan-400">CREATE
-                                        ACCOUNT</button>
-                                </div>
-                                <div class="m-2">Forgotten your login details?</div>
-                                    <div class="font-medium ml-2">Get Help Signing In</div>
-
-
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class=" md:w-1/2 overflow-hidden ">
-                        <img src="https://source.unsplash.com/700x600/?computer,login" alt="" class="" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> --}}
-
-
-
-
-<div class="flex justify-center">
-    <div class="flex flex-col justify-center">
-        <div class="flex flex-col md:flex-row max-w-7xl justify-center items-center ">
-            <div class="overflow-hidden w-full m-4 flex justify-center bg-gray-50 rounded-lg shadow-xl">
-                <div class="flex flex-col md:flex-row items-center shadow-md h-full  ">
-                    <div class="  md:w-1/2 overflow-hidden ">
-                        <div class="flex flex-col items-center justify-center text-stone-400">
-                            <ion-icon name="logo-amplify" class="text-5xl text-fuchsia-600"></ion-icon>
-                            <div class="flex flex-col">
-                                <div class="m-2">EMAIL</div>
-                                <input class="border-b m-2  bg-gray-50 focus:outline-none" />
-
-                                <div class="m-2">PASSWORD</div>
-                                <input class="border-b m-2  bg-gray-50  focus:outline-none" type="password" />
-                                <div class="flex m-2">
-                                    <input class="border-b  border-stone-400 " type="checkbox" />
-                                    <div class="ml-1">Remember Me</div>
-                                </div>
-                                <div class="flex m-2">
-                                    <button
-                                        class="bg-gradient-to-l from-fuchsia-600 to-cyan-400 px-6 py-1 rounded-2xl text-white font-medium">LOGIN</button>
-                                    <button
-                                        class="text-transparent  bg-clip-text bg-gradient-to-l from-fuchsia-600 to-cyan-400 font-bold ml-2 border-2 rounded-2xl px-6 border-cyan-400">CREATE
-                                        ACCOUNT</button>
-                                </div>
-                                <div class="m-2">Forgotten your login details?</div>
-                                    <div class="font-medium ml-2">Get Help Signing In</div>
-
-
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class=" md:w-1/2 overflow-hidden ">
-                        <img src="https://source.unsplash.com/700x600/?computer,login" alt="" class="" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
